@@ -122,7 +122,10 @@ img {
     margin-right: 50px;
 }
 
-/* .menu-list-item::after {
+
+/* Налаштування підсвітки клавіші при активному класі */
+
+.menu-list-item::after {
     display: flex;
     content: "";
 
@@ -130,8 +133,10 @@ img {
     height: 4px;
     background-color: var(--main-blue);
     border-radius: 2px;
-    margin-top: 28px;
-} */
+    /* margin-top: 28px; */
+
+    opacity: 0;
+}
 
 .header-address {
     font-weight: 500;
@@ -166,7 +171,7 @@ img {
 }
 /* Активна кнопка поточної вкладки (пріорітетність за рахунок тегу, що розміщений нижче в потоці!)*/
 .active {
-    color: var(--main-blue); 
+    color: var(--main-blue);
 }
 
 .mail-icon {
@@ -183,7 +188,8 @@ img {
     display: inline-block;
 }
 
-.mail-icon:hover, .mail-icon:focus, .phone-icon:hover, .phone-icon:focus, .address-info{
+
+.mail-icon:hover, .mail-icon:focus, .phone-icon:hover, .phone-icon:focus, .address-info {
     fill: currentColor;
 }
 
@@ -449,6 +455,7 @@ img {
     height: 92px;
 }
 
+/* Написання класів!! */
 .regular-client-link:hover .regular-client-logo, .regular-client-link:focus .regular-client-logo, .regular-client-link:hover, .regular-client-link:focus {
     fill: var(--main-blue);
     border-color: var(--main-blue);
@@ -606,9 +613,12 @@ address {
     flex-basis: calc((100% - 60px) / 3);
     cursor: pointer;
 }
-.client-list-item:hover, .client-list-item:focus {
+
+.client-list-item:hover .client-list-item-overlay, .client-list-item:focus .client-list-item-overlay, .client-list-item:hover, .client-list-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    opacity: 1;
 }
+
 /* .client-list-item:not(:nth-child(3n)) {
     margin-right: 30px;
 }
@@ -640,11 +650,10 @@ address {
 
     justify-content: center;
     align-items: center;
-}
 
-.client-list-item-overlay.is-hidden {
-     opacity: 0;
+    opacity: 0;
     pointer-events: none;
+
 }
 
 
