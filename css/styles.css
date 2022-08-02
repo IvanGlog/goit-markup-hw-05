@@ -696,6 +696,7 @@ address {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    color: var(--main-black);
 
     margin-bottom: 4px;
 }
